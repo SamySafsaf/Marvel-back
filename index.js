@@ -1,7 +1,7 @@
 const express = require("express");
 const formidable = require("express-formidable");
 const axios = require("axios");
-const mongoose = require("mongoose");
+// const mongoose = require("mongoose");
 const cors = require("cors");
 require("dotenv").config();
 
@@ -9,11 +9,11 @@ const app = express();
 app.use(formidable());
 app.use(cors());
 
-mongoose.connect("mongodb://localhost/marvel-app", {
-  useCreateIndex: true,
-  useUnifiedTopology: true,
-  useNewUrlParser: true,
-});
+// mongoose.connect("mongodb://localhost/marvel-app", {
+//   useCreateIndex: true,
+//   useUnifiedTopology: true,
+//   useNewUrlParser: true,
+// });
 
 //import routes
 const charactersRoutes = require("./routes/characters");

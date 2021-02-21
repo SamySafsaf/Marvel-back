@@ -5,7 +5,7 @@ const router = express.Router();
 router.get("/comics/:id", async (req, res) => {
   try {
     const response = await axios.get(
-      `https://lereacteur-marvel-api.herokuapp.com/comics/${req.params.id}?apiKey=XQyunajC30Gp3yGD`
+      `https://lereacteur-marvel-api.herokuapp.com/comics/${req.params.id}?apiKey=${process.env.API_KEY}`
     );
     res.status(200).json(response.data);
   } catch (error) {
